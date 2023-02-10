@@ -56,6 +56,7 @@ public class SecurityConfiguration {
                 .requestMatchers(HttpMethod.GET, "/hello-world").authenticated() // any role
                 .requestMatchers(HttpMethod.GET, "/hello/admin").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.GET, "/hello/user").hasAnyRole("USER", "ADMIN")
+                .requestMatchers(HttpMethod.GET, "/hello/david").hasAnyRole("USER", "ADMIN")
                 .requestMatchers(HttpMethod.GET, "/curses/*/department").hasRole("ADMIN")
                 .anyRequest().permitAll();
 

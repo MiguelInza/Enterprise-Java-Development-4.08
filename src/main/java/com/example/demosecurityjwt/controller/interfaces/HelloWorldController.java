@@ -9,4 +9,6 @@ public interface HelloWorldController {
     ResponseDTO helloAnon(Optional<String> name);
     ResponseDTO helloUser();
     ResponseDTO helloAdmin(Authentication authentication);
+
+    ResponseDTO helloDavid();
 }

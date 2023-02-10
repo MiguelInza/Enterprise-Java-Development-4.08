@@ -3,6 +3,7 @@ package com.example.demosecurityjwt.controller.impl;
 import com.example.demosecurityjwt.controller.dto.ResponseDTO;
 import com.example.demosecurityjwt.controller.interfaces.HelloWorldController;
 import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,4 +44,13 @@ public class HelloWorldControllerImpl implements HelloWorldController {
         responseDTO.setMessage("Hello " + xx);
         return responseDTO;
     }
+
+    @GetMapping("/hello/david")
+    public ResponseDTO helloDavid() {
+        ResponseDTO responseDTO = new ResponseDTO();
+        responseDTO.setMessage("Hello David");
+        return responseDTO;
+    }
+
+
 }
